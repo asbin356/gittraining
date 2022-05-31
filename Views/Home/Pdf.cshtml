@@ -1,0 +1,44 @@
+﻿
+<div id="container_data_entry">
+    <div id="container" style="width:100%;overflow:auto;">
+        <ul>
+            <li>
+                <b>Q No. 1:</b>
+                What are Binary Operators? Give examples of arithmatic binary operators.
+            </li>
+            <li><textarea id="a1"></textarea></li>
+        </ul>
+        <ul>
+            <li>
+                <b>Q No. 2:</b>
+                What is type conversion? What is meant by implicit and explicit type conversion?
+            </li>
+            <li><textarea id="a2"></textarea></li>
+        </ul>
+        <ul>
+            <li><b>Q No. 3:</b> What do you mean by dynamic initialization of a variable? Give an example.</li>
+            <li><textarea id="a3"></textarea></li>
+        </ul>
+    </div>
+    <div style="text-align:center;">
+        <input type="button" style="" value="Print to PDF" id="btPrint" onclick="onlineTestApp.printPage();" />
+    </div>
+</div>
+
+<script>
+    // get all textarea (anwsers).
+    let ele_tArea = document.getElementsByTagName('textarea');
+
+    for (let i = 0; i <= ele_tArea.length - 1; i++) {
+        if (theBody === '') {
+            if (ele_tArea[i].value != '') {
+                theBody = '<p class="answers"> <b>Answer ' + (i + 1) + '</b> - ' + ele_tArea[i].value + '</p>';
+            }
+        }
+        else {
+            if (ele_tArea[i].value != '') {
+                theBody = theBody + '<p class="answers"> <b>Answer ' + (i + 1) + '</b> - ' + ele_tArea[i].value + '</p>';
+            }
+        }
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿<script src="../js/jquery.PrintArea.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tabs").tabs();
+        $("#print_button").click(function () {
+            $("div.PrintArea").printArea();
+        });
+</script>
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">TAB1</a></li>
+        <li><a href="#tabs-2">TAB2</a></li>
+        <li><a href="#tabs-3">TAB3</a></li>
+    </ul>
+    <div id="tabs-1"></div>
+    <div id="tabs-2"></div>
+    <div id="tabs-3"></div>
+</div>
+<button type="submit" id="print_button">
+    <img src="../images/printer.png"
+         alt="print icon" style="vertical-align:text-bottom;" /> PRINT PAGE
+</button>
